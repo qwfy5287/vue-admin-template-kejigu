@@ -2,7 +2,7 @@
 <template>
   <div class="app-container index-form-inline">
     index-form-inline
-    <FormInline :dynamic-form="dynamicForm" />
+    <FormInline :dynamic-form="dynamicForm" @change="formInlineChange" />
   </div>
 </template>
 <script>
@@ -40,7 +40,11 @@ export default {
   methods: {
     init() { },
     async fetchData() { },
-    render() { }
+    render() { },
+    //
+    formInlineChange(item) {
+      console.log(item)
+    }
   }
 }
 </script>

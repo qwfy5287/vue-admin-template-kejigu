@@ -28,7 +28,7 @@
         <!-- 其他 -->
         <el-form-item v-else v-show="item.isShow!=false" :prop="'form['+index+'].value'" :rules="item.rules">
           <!-- input -->
-          <el-input v-if="item.element=='input'" v-model.trim="item.value" :placeholder="item.label" />
+          <el-input v-if="item.element=='input'" v-model.trim="item.value" :placeholder="item.label" @change="change(item)" />
 
           <!-- switch -->
           <el-switch v-if="item.element=='switch'" v-model="item.value" />
@@ -70,6 +70,7 @@
             range-separator="~"
             start-placeholder="开始日期"
             end-placeholder="结束日期"
+            @change="change(item)"
           />
 
         </el-form-item>
@@ -168,6 +169,13 @@ export default {
       })
 
       return result
+    },
+    //
+    /**
+     * 表单项改变事件
+     */
+    change(item) {
+      this.$emit('change', item)
     }
   }
 }
