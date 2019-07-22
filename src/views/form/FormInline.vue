@@ -127,7 +127,7 @@ export default {
     render() { },
     //
     submitForm() {
-      const result = this.toSaveData()
+      const result = this.getSaveData()
       if (result) {
         this.$emit('save', result)
       }
@@ -135,7 +135,7 @@ export default {
       // this.$refs.ruleForm.validate(valid => {
       //   if (valid) {
       //     // this.$message('submit')
-      //     this.$emit('save', this.toSaveData())
+      //     this.$emit('save', this.getSaveData())
       //     this.dialogVisible = false
       //   } else {
       //     // this.$message('error submit')

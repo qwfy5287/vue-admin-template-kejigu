@@ -17,8 +17,8 @@ export default {
         name: 'name',
         label: '模型名称',
         value: null,
-        // rules: [{ required: true, message: '输入错误' }],
-        rules: null,
+        rules: [{ required: true, message: '请输入模型名称' }],
+        // rules: null,
         element: 'input'
       }, {
         name: 'name1',
