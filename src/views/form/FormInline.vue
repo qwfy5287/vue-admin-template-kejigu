@@ -34,7 +34,7 @@
           <el-switch v-if="item.element=='switch'" v-model="item.value" />
 
           <!-- select -->
-          <el-select v-if="item.element=='select'" v-model="item.value" :placeholder="item.label">
+          <el-select v-if="item.element=='select'" v-model="item.value" :placeholder="item.label" @change="change(item)">
             <el-option v-for="option in item.options" :key="option.value" :label="option.label" :value="option.value" />
           </el-select>
 

@@ -21,6 +21,20 @@ export default {
         // rules: null,
         element: 'input'
       }, {
+        name: 'type',
+        label: '模型类型',
+        value: null,
+        rules: [{ required: true, message: '请输入模型类型' }],
+        // rules: null,
+        element: 'select',
+        options: [{
+          label: '类型1', value: '01'
+        }, {
+          label: '类型2', value: '02'
+        }, {
+          label: '类型3', value: '03'
+        }]
+      }, {
         name: 'name1',
         label: '模型名称1',
         value: null,
