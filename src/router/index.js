@@ -82,18 +82,13 @@ export const constantRoutes = [
   {
     path: '/form',
     component: Layout,
+    meta: { title: 'Form', icon: 'form' },
     children: [
       {
         path: 'index',
         name: 'Form',
         component: () => import('@/views/form/index'),
         meta: { title: 'Form', icon: 'form' }
-      },
-      {
-        path: 'form-inline',
-        name: 'FormInline',
-        component: () => import('@/views/form/FormInline'),
-        meta: { title: 'FormInline', icon: 'form-line' }
       },
       {
         path: 'index-form-inline',
