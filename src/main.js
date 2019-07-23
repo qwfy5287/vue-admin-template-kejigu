@@ -33,6 +33,10 @@ if (process.env.NODE_ENV === 'production') {
 // Vue.use(ElementUI, { locale })
 Vue.use(ElementUI, { size: 'small' })
 
+// scrollTo
+import VueScrollTo from 'vue-scrollto'
+Vue.use(VueScrollTo)
+
 Vue.config.productionTip = false
 
 new Vue({

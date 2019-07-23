@@ -100,6 +100,26 @@ export const constantRoutes = [
   },
 
   {
+    path: '/scroll-to',
+    component: Layout,
+    meta: { title: 'ScrollTo', icon: 'scroll-to' },
+    children: [
+      // {
+      //   path: 'index',
+      //   name: 'Form',
+      //   component: () => import('@/views/form/index'),
+      //   meta: { title: 'Form', icon: 'form' }
+      // },
+      {
+        path: 'scroll-to-demo',
+        name: 'ScrollToDemo',
+        component: () => import('@/views/scroll-to/ScrollToDemo'),
+        meta: { title: 'ScrollToDemo', icon: 'scroll-to-demo' }
+      }
+    ]
+  },
+
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
